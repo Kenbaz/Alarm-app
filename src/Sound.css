@@ -6,7 +6,7 @@
         align-items: center;
 
         >h3{
-            margin-inline-start: 254px;
+            margin-inline-start: 80px;
         }
 
         .back-btn {
@@ -32,7 +32,7 @@
         border: none;
         width: 94%;
         max-width: 100%;
-        margin-inline-start: 20px;
+        /* margin-inline-start: 20px; */
         height: 450px;
         background-color: #222222;
         border-radius: 10px;
@@ -43,6 +43,8 @@
         flex-direction: column;
         gap: 15px;
         cursor: pointer;
+        border: 1px solid #222222;
+        margin: 0 auto;
         
         >div {
             margin-inline-start: 50px;
@@ -54,7 +56,7 @@
                 transform: scale(1, 0.2);
                 color: #F9F9F9;
                 margin-block-start: 5px;
-                width: 93.3%;
+                width: 294px;
             };
 
             .font-awesome-check {

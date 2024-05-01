@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import SwitchButton from "./Switch";
 import AlarmModal from "./AlarmModal";
+import TimePicker from "react-time-picker";
 
 function Alarm({
   selectedDays,
@@ -151,49 +152,49 @@ function Alarm({
     navigate("/");
   }
 
-  function DigitalTimePicker({
-    selectedHour,
-    selectedMinute,
-    handleHourClick,
-    handleMinuteClick,
-  }) {
-    // Populating hours and minutes
-    const hours = Array.from({ length: 24 }, (_, i) =>
-      i.toString().padStart(2, "0")
-    );
-    const minutes = Array.from({ length: 60 }, (_, i) =>
-      i.toString().padStart(2, "0")
-    );
+  // function DigitalTimePicker({
+  //   selectedHour,
+  //   selectedMinute,
+  //   handleHourClick,
+  //   handleMinuteClick,
+  // }) {
+  //   // Populating hours and minutes
+  //   const hours = Array.from({ length: 24 }, (_, i) =>
+  //     i.toString().padStart(2, "0")
+  //   );
+  //   const minutes = Array.from({ length: 60 }, (_, i) =>
+  //     i.toString().padStart(2, "0")
+  //   );
 
-    return (
-      <div className="time-picker">
-        <div className="hours">
-          {hours.map((hour) => (
-            <div
-              key={hour}
-              className={`hour ${hour === selectedHour ? "selected" : ""}`}
-              onClick={() => handleHourClick(hour)}
-            >
-              {hour}
-            </div>
-          ))}
-        </div>
-        <div className="minutes">
-          {minutes.map((minute) => (
-            <div
-              key={minute}
-              className={`minute ${
-                minute === selectedMinute ? "selected" : ""
-              }`}
-              onClick={() => handleMinuteClick(minute)}
-            >
-              {minute}
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
+  //   return (
+  //     <div className="time-picker">
+  //       <div className="hours">
+  //         {hours.map((hour) => (
+  //           <div
+  //             key={hour}
+  //             className={`hour ${hour === selectedHour ? "selected" : ""}`}
+  //             onClick={() => handleHourClick(hour)}
+  //           >
+  //             {hour}
+  //           </div>
+  //         ))}
+  //       </div>
+  //       <div className="minutes">
+  //         {minutes.map((minute) => (
+  //           <div
+  //             key={minute}
+  //             className={`minute ${
+  //               minute === selectedMinute ? "selected" : ""
+  //             }`}
+  //             onClick={() => handleMinuteClick(minute)}
+  //           >
+  //             {minute}
+  //           </div>
+  //         ))}
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   function handleModalSnooze() {
     const snoozeTimeoutId = setTimeout(() => {
@@ -249,12 +250,19 @@ function Alarm({
           Save
         </button>
       </div>
-      <div>
-        <DigitalTimePicker
-          selectedHour={hoursAlarmTime}
-          selectedMinute={minutesAlarmTime}
-          handleHourClick={(hour) => setHoursAlarmTime(hour)}
-          handleMinuteClick={(minute) => setMinutesAlarmTime(minute)}
+      <div className="time-picker">
+        <TimePicker
+          onChange={(time) => {
+            // Extract hours and minutes from the time string
+            const [hours, minutes] = time.split(":");
+            setHoursAlarmTime(hours);
+            setMinutesAlarmTime(minutes);
+          }}
+          value={
+            hoursAlarmTime && minutesAlarmTime
+              ? `${hoursAlarmTime}:${minutesAlarmTime}`
+              : null
+          }
         />
       </div>
 

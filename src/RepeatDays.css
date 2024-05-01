@@ -6,6 +6,7 @@
       background-color: #222222;
       border-radius: 15px;
       padding: 7px;
+      margin: 0 auto;
 
     >.repeat-days-container {
             display: flex;
@@ -29,7 +30,7 @@
                 transform: scale(1, 0.2);
                 color: #F9F9F9;
                 margin-block-start: 5px;
-                width: 116%
+                width: 114%
             };
 
             .font-awesome-check {
@@ -51,7 +52,7 @@
 
     > h1 {
         position: absolute;
-        left: 300px;
+        left: 200px;
         font-weight: 500;
         font-size: 24px;
         text-align: center;

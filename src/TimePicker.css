@@ -48,4 +48,19 @@
    .minutes::-webkit-scrollbar-track {
        background-color: transparent;
    }
+
+   .react-time-picker__inputGroup {
+        width: 250px;
+    .react-time-picker__inputGroup__hour {
+            width: 50px;
+            border: 1px solid aqua;
+            padding-left: 100px
+        }
+    
+        ;
+    
+        .react-time-picker__inputGroup__minute {}
+   }
+
+   
 }
