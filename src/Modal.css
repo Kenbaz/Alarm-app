@@ -1,0 +1,48 @@
+.modal-box {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    padding: 20px;
+    z-index: 1000;
+    width: 670px;
+    height: 906px;
+
+    .modal-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            font-size: 24px;
+            font-weight: 400;
+            color: #fff;
+            margin-block-start: 500px;
+            margin-block-end: 20px
+        };
+
+        .snooze-btn {
+            margin-block-end: 200px;
+            width: 200px;
+            height: 60px;
+            border-radius: 34px;
+            font-size: 18px;
+            font-weight: 400;
+            background-color: orange
+        };
+
+        .stop-btn {
+            width: 100px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, -0.1);
+            backdrop-filter: blur(1px);
+            border-radius: 34px;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 400;
+        }
+    };
+}

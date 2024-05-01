@@ -1,0 +1,51 @@
+.time-picker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block-end: 20px;
+
+   .hours, .minutes {
+        
+        overflow-y: scroll;
+        height: 200px;
+        max-height: 100%;
+        /* Adjust as needed */
+        /* border: 1px solid #ccc; */
+        padding: 5px;
+        margin: 5px;
+   };
+
+   .hour,
+   .minute {
+       cursor: pointer;
+       padding: 5px;
+       transition: background-color 0.3s ease;
+   };
+
+   .hour:hover,
+   .minute:hover {
+       background-color: #ccc;
+       color: #222222;
+   }
+
+   .selected {
+       background-color: #ccc;
+       color: #222222;
+   }
+
+   .hours::-webkit-scrollbar,
+   .minutes::-webkit-scrollbar {
+       width: 8px;
+   }
+
+   .hours::-webkit-scrollbar-thumb,
+   .minutes::-webkit-scrollbar-thumb {
+       background-color: rgba(0, 0, 0, 0.3);
+       border-radius: 4px;
+   }
+
+   .hours::-webkit-scrollbar-track,
+   .minutes::-webkit-scrollbar-track {
+       background-color: transparent;
+   }
+}

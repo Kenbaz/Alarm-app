@@ -1,0 +1,68 @@
+.sound-container {
+    
+    .sound-heading-container {
+        display: flex;
+        margin-block-end: 50px;
+        align-items: center;
+
+        >h3{
+            margin-inline-start: 254px;
+        }
+
+        .back-btn {
+        background: none;
+        color: orange;
+        font-size: 18px;
+        font-weight: 400;
+        position: relative;
+        margin-inline-start: 15px;
+        outline: none;
+        cursor: pointer;
+    };
+    };
+
+    >p {
+        font-weight: 200;
+        letter-spacing: 2px;
+        margin-block-end: 10px;
+        margin-inline-start: 45px;
+    };
+
+    .sound-selection-container {  
+        border: none;
+        width: 94%;
+        max-width: 100%;
+        margin-inline-start: 20px;
+        height: 450px;
+        background-color: #222222;
+        border-radius: 10px;
+        padding: 7px;
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 15px;
+        cursor: pointer;
+        
+        >div {
+            margin-inline-start: 50px;
+            cursor: pointer;
+            position: relative;
+            width: 100%;
+
+             >.line {
+                transform: scale(1, 0.2);
+                color: #F9F9F9;
+                margin-block-start: 5px;
+                width: 93.3%;
+            };
+
+            .font-awesome-check {
+                color: orange;
+                position: absolute;
+                top:5px;
+                left: -30px;
+            }
+        }
+    }
+}

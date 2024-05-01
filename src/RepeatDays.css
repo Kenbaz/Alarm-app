@@ -1,0 +1,79 @@
+.func-container {
+    border: none;
+      width: 94%;
+      margin-inline-start: 20px;
+      height: 450px;
+      background-color: #222222;
+      border-radius: 15px;
+      padding: 7px;
+
+    >.repeat-days-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 15px;
+            color: #fff;
+            height: 400px;
+            margin-block-start: 15px;
+            width: 85.3%;
+            /* cursor: pointer; */
+
+        >div {
+            width: 100%;
+            margin-inline-start: 20px;
+            cursor: pointer;
+            padding: 5px;
+            position: relative;            
+        
+            >.line {
+                transform: scale(1, 0.2);
+                color: #F9F9F9;
+                margin-block-start: 5px;
+                width: 116%
+            };
+
+            .font-awesome-check {
+                color: orange;
+                position: absolute;
+                top: 10px;
+                right: -20px;
+            }
+        };
+    };
+}
+
+.top-container {
+    display: flex;
+    margin-block-end: 50px;
+    position: relative;
+    align-items: center;
+    margin-block-start: 10px;
+
+    > h1 {
+        position: absolute;
+        left: 300px;
+        font-weight: 500;
+        font-size: 24px;
+        text-align: center;
+    };
+
+    .back-btn {
+        background: none;
+        color: orange;
+        font-size: 18px;
+        font-weight: 400;
+        position: relative;
+        margin-inline-start: 15px;
+        outline: none;
+        cursor: pointer;
+
+        .cheveron-left {
+            position: absolute;
+            left: 8px;
+            top: 15px;
+        };
+    };
+};
+
+
+
